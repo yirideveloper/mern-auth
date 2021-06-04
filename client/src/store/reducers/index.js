@@ -3,10 +3,8 @@ import { connectRouter } from "connected-react-router";
 
 import user from "./user";
 
-const createRootReducer = (history) =>
+export default (history) =>
   combineReducers({
     router: connectRouter(history), // Connects react router to redux
     user,
   });
-
-export default createRootReducer;
